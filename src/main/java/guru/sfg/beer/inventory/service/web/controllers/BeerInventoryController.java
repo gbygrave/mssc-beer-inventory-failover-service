@@ -4,7 +4,6 @@ import guru.sfg.brewery.model.BeerInventoryDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.OffsetDateTime;
@@ -20,8 +19,8 @@ import java.util.UUID;
 @RestController
 public class BeerInventoryController {
 
-    @GetMapping("api/v1/beer/{beerId}/inventory-failover")
-    List<BeerInventoryDto> listBeersById(@PathVariable UUID beerId){
+    @GetMapping("inventory-failover")
+    List<BeerInventoryDto> listBeersById(){
         OffsetDateTime now = OffsetDateTime.now();
         BeerInventoryDto beerInventoryDto = BeerInventoryDto.builder()
                 .id(new UUID(0,0))
