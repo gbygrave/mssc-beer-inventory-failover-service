@@ -4,20 +4,28 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.sfg-beer-works</groupId>
-        <artifactId>sfg-brewery-bom</artifactId>
-        <version>1.0.17</version>
+        <artifactId>sfg-beer-works-bom</artifactId>
+        <version>1.0.21</version>
     </parent>
+
 
     <artifactId>mssc-beer-inventory-failover-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mssc-beer-inventory-failover-service</name>
     <description>mssc-beer-inventory-failover-service</description>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
 
     <dependencies>
-<!--        <dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+
+        <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-webflux</artifactId>-->
 <!--        </dependency>-->
