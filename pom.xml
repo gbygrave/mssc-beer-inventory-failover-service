@@ -8,11 +8,14 @@
         <version>1.0.21</version>
     </parent>
 
-
     <artifactId>mssc-beer-inventory-failover-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mssc-beer-inventory-failover-service</name>
     <description>mssc-beer-inventory-failover-service</description>
+
+    <properties>
+        <docker.image.prefix>gadb2</docker.image.prefix>
+    </properties>
 
     <dependencies>
         <dependency>
